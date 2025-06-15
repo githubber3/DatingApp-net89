@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 
+// Added comment to test git push from cmd
 namespace API.Controllers
 {
     [Route("api/[controller]")] // /api/users
@@ -22,8 +23,8 @@ namespace API.Controllers
         public async Task<ActionResult<AppUser>> GetUser(int id)
         {
             var user = await context.Users.FindAsync(id);
-            if(user == null) return NotFound();
-            return user;            
+            if (user == null) return NotFound();
+            return user;
 
         }
     }
