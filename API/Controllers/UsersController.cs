@@ -6,6 +6,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
 
 // Added comment to test git push from cmd
+// Added comment to test git push from VS Code Terminal
 namespace API.Controllers
 {
     [Route("api/[controller]")] // /api/users
