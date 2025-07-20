@@ -14,9 +14,7 @@ export class MembersService {
   
   
   getMembers() {
-    return this.http.get<Member[]>(this.baseUrl + 'users').subscribe({
-      next: members => this.members.set(members)
-    }) 
+    return this.http.get<Member[]>(this.baseUrl + 'users') 
   }
 
   getMember(username: string)  {
