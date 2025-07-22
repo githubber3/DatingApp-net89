@@ -15,13 +15,13 @@ export class MembersService {
   
   getMembers() {
     return this.http.get<Member[]>(this.baseUrl + 'users').subscribe({
-      next: members => this.members.set(members)
+      next: members => this.members.set(members)            
     }) 
   }
 
   getMember(username: string)  {
     const member = this.members().find(x => x.username === username);
-    if (member!== undefined) return of(member);
+    if (member !== undefined) return of(member);
 
     return this.http.get<Member>(this.baseUrl + 'users/' + username);
   }  

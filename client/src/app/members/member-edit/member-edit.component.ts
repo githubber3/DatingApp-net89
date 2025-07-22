@@ -19,7 +19,6 @@ export class MemberEditComponent implements OnInit {
     if (this.editForm?.dirty) {
       $event.returnValue = true;
     }
-
   }
   member?: Member;
   private accountService = inject(AccountService);
